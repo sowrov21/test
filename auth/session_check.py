@@ -83,6 +83,7 @@ def auto_login_from_cookie(page_name: str = None):
         st.session_state.eml = local_storage_manager.getItem("ls_eml")
         st.session_state.fn = local_storage_manager.getItem("ls_fn")
         st.session_state.mob = local_storage_manager.getItem("ls_mob")
+        ut_value = local_storage_manager.getItem("ls_ut")
         try:
             st.session_state.ut = int(ut_value := local_storage_manager.getItem("ls_ut")) if ut_value not in [None, ""] else -1
         except ValueError:
