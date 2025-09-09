@@ -39,7 +39,7 @@ def render_client_form(form_title="Add New Client",form_type="add",on_submit_cle
                 contact_no = st.text_input("Contact No.*",value=field_contact_no, placeholder="01972002233")
             address = st.text_area("Address:",value=field_address, height=150, placeholder="1/A,Mirpur, Dhaka 2016")
 
-            if st.form_submit_button(f"{form_type.capitalize()} Client", width='stretch'):
+            if st.form_submit_button(f"{form_type.capitalize()} Client",  use_container_width=True):
                 if not name or not contact_no:
                     st.error("Please fill all required fields (marked with *)")
                 else:

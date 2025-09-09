@@ -45,7 +45,7 @@ def render_login_page():
             password = st.text_input("Password", placeholder="Enter your password", type="password")
             remember_me = st.checkbox("Remember me")
             
-            if st.form_submit_button("Login", width='stretch'):
+            if st.form_submit_button("Login",  use_container_width=True):
                 if not username or not password:
                     st.error("Please enter both username and password")
                 else:

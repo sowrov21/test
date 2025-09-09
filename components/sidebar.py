@@ -48,7 +48,7 @@ def render_sidebar():
                 st.rerun()
             
             # Logout button
-            if st.button("Logout", width='stretch'):
+            if st.button("Logout", use_container_width=True):
                 st.session_state.authenticated = False
                 st.session_state.username = None
                 st.session_state.user_role = None
