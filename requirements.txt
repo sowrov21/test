@@ -1,5 +1,5 @@
 requests>=2.32.4
-streamlit>=1.46.0
+streamlit==1.46.0
 passlib>=1.7.4
 streamlit-aggrid>=1.1.5
 streamlit-cookies-controller>=0.0.4
