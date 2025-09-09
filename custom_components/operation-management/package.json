@@ -1,0 +1,31 @@
+{
+  "name": "data-management",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode development",
+    "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@rollup/plugin-inject": "^5.0.5",
+    "terser": "^5.43.1",
+    "vite": "^5.2.0",
+    "vite-plugin-remove-console": "^2.2.0"
+  },
+  "dependencies": {
+    "@azure/storage-blob": "^12.27.0",
+    "bootstrap": "^5.3.7",
+    "choices.js": "^11.1.0",
+    "crypto-js": "^4.2.0",
+    "flatpickr": "^4.6.13",
+    "jquery": "^3.7.1",
+    "jwt-decode": "^4.0.0",
+    "streamlit-component-lib": "^2.0.0",
+    "sweetalert2": "^11.22.2",
+    "toastr": "^2.1.4"
+  }
+}
