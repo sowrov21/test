@@ -80,7 +80,7 @@ with page_placeholder.container():
                 {"Date": "2023-10-30", "Activity": "Proposal sent", "Client": "Globex"},
                 {"Date": "2023-10-28", "Activity": "Contract signed", "Client": "Initech"},
             ],
-            use_container_width=True,
+            width='stretch',
             hide_index=True
         )
 

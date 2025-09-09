@@ -1,0 +1,40 @@
+# Byte-code files
+*.pyc
+__pycache__/
+**/__pycache__/
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# IDE specific files
+.idea/
+.vscode/
+*.iml
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Test related files
+.pytest_cache/
+.coverage
+
+# Distribution and build artifacts
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Sensitive information (e.g., API keys, passwords)
+*.env
+.env.local
+config.ini
+package-lock.json
+#ignore folders

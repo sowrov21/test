@@ -88,3 +88,14 @@ def refreshItems():
 
 def is_ready() -> bool:
     return st.session_state.get("_local_storage_ready", False)
+
+def deleteItem_if_exists(key: str):
+    controller = get_controller()
+    try:
+        controller.deleteItem(itemKey=key)
+    except KeyError:
+        pass
+    except Exception:
+        # some implementations raise generic Exception if key missing
+        pass
+    st.session_state.get("_local_storage_cache", {}).pop(key, None)

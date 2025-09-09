@@ -83,7 +83,11 @@ def auto_login_from_cookie(page_name: str = None):
         st.session_state.eml = local_storage_manager.getItem("ls_eml")
         st.session_state.fn = local_storage_manager.getItem("ls_fn")
         st.session_state.mob = local_storage_manager.getItem("ls_mob")
-        st.session_state.ut = int(local_storage_manager.getItem("ls_ut"))
+        try:
+            st.session_state.ut = int(ut_value := local_storage_manager.getItem("ls_ut")) if ut_value not in [None, ""] else -1
+        except ValueError:
+            st.session_state.ut = -1
+
         # cu = local_storage_manager.getItem("cu")
         # try:
         #     cu_data = json.loads(cu) if isinstance(cu, str) else cu
@@ -97,7 +101,7 @@ def auto_login_from_cookie(page_name: str = None):
         st.rerun()
     except Exception as e:
         #cookies_manager.deleteCookie("jwt")
-        local_storage_manager.deleteItem('jwt')
+        #local_storage_manager.deleteItem('jwt')
         st.warning("An error occurred while validating your session.")
         st.error(f"Debug info: {str(e)}")  # Consider hiding this in production
         st.stop()

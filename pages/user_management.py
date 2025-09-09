@@ -46,7 +46,7 @@ def render_user_management():
                         }
                         for user in users
                     ],
-                    use_container_width=True,
+                    width='stretch',
                     hide_index=True
                 )
         else:
@@ -64,7 +64,7 @@ def render_user_management():
                 role = st.selectbox("Role*", ["user", "admin", "manager"])
                 email = st.text_input("Email", placeholder="Enter email")
             
-            if st.form_submit_button("Create User", use_container_width=True):
+            if st.form_submit_button("Create User",width='stretch'):
                 if not username or not password or not confirm_password or not role:
                     st.error("Please fill all required fields (marked with *)")
                 elif password != confirm_password:
