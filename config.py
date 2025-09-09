@@ -9,7 +9,7 @@ DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 APP_NAME = "XpertPredict"
 APP_ICON = "🏢"
 DEFAULT_THEME = "light"
-APP_ENV = "dev" # dev|prod
+APP_ENV = "prod" # dev|prod
 
 # Security
 SESSION_EXPIRE_MINUTES = 30
